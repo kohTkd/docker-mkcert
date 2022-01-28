@@ -14,8 +14,7 @@ services:
       DOMAIN: localhost
       RESOLVER: '127.0.0.11'
     volumes:
-      - ./nginx/html:/usr/share/nginx/html
-      - ./nginx/proxy_config/:/etc/nginx/tmp
+      - ./nginx/config/:/etc/nginx/tmp
     ports:
       - 443:443
       - 80:80
