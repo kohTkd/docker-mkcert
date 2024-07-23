@@ -12,7 +12,7 @@ EXPOSE ${LISTEN}
 RUN apk update && apk upgrade && \
     apk add --no-cache --update openssl && \
     rm -rf /var/cache/apk/* && \
-    wget -O /usr/local/bin/mkcert https://github.com/FiloSottile/mkcert/releases/download/${MKCERT_VERSION}/mkcert-v1.4.3-linux-amd64 && \
+    wget -O /usr/local/bin/mkcert https://github.com/FiloSottile/mkcert/releases/download/${MKCERT_VERSION}/mkcert-${MKCERT_VERSION}-linux-amd64 && \
     chmod +x /usr/local/bin/mkcert && \
     mkdir -p /etc/nginx/cert && \
     cd /etc/nginx/cert && \
